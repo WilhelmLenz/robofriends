@@ -1,15 +1,17 @@
-import React, {Component} from "react";
+import React from "react";
 
 
-
-class Card extends Component {
-  render() {
+const Card = function(props) {
     return (
-      <div>
-        <h1>Hallo Welt</h1>
+      <div className="tc bg-light-green dib br3 pa3 ma2 grow">
+        <img src={`https://robohash.org/${props.id}200x200`} alt="robots"/>
+        <div>
+          <h2>{props.name}</h2>
+          <p>{props.email}</p>
+        </div>
       </div>
     )
   }
-}
+
 
 export default Card
