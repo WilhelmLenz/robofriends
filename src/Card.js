@@ -1,14 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 
 const Card = function(props) {
+  const { name, email, id } = props
     return (
       <div className="tc bg-light-green dib br3 pa3 ma2 grow">
-        <img src={`https://robohash.org/${props.id}200x200`} alt="robots"/>
-        <div>
-          <h2>{props.name}</h2>
-          <p>{props.email}</p>
-        </div>
+        <img src={`https://robohash.org/${id}?200x200`} alt="robots"/>
+        <Fragment>
+          <h2>{name}</h2>
+          <p>{email}</p>
+        </Fragment>
       </div>
     )
   }
